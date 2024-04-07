@@ -26,9 +26,9 @@ TextInput.propTypes = {
     type: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     styles: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    register: PropTypes.object.isRequired,
-    name: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    register: PropTypes.object,
+    name: PropTypes.string,
     error: PropTypes.string
 };
 
