@@ -3,6 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import CustomButton from "./CustomButton";
 import { popularSearch } from "../utils/data";
 import { HeroImage } from "../assets";
+import PropTypes from 'prop-types';
 
 const SearchInput = ({ placeholder, icon, value, setValue, styles }) => {
     const handleChange = (e) => {
@@ -35,7 +36,7 @@ const Header = ({title, type, handleClick, searchQuery, setSearchQuery, location
   return (
     <div className="bg-[#f7fdfd]">
         <div 
-            className={`container mx-auto px-5 ${type ? 'h-[500px]' : 'h-[350pc]'} flex items-center relative`}
+            className={`container mx-auto px-5 ${type ? 'h-[500px]' : 'h-[350px]'} flex items-center relative`}
         >
             <div className="w-full z-10">
                 <div className="mb-8">
@@ -98,5 +99,24 @@ const Header = ({title, type, handleClick, searchQuery, setSearchQuery, location
     </div>
   )
 }
+
+
+SearchInput.propTypes = {
+    placeholder: PropTypes.string.isRequired,
+    icon: PropTypes.element.isRequired,
+    value: PropTypes.string.isRequired,
+    setValue: PropTypes.func.isRequired,
+    styles: PropTypes.string,
+};
+
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+    type: PropTypes.bool.isRequired,
+    handleClick: PropTypes.func.isRequired,
+    searchQuery: PropTypes.string.isRequired,
+    setSearchQuery: PropTypes.func.isRequired,
+    location: PropTypes.string.isRequired,
+    setLocation: PropTypes.func.isRequired,
+};
 
 export default Header

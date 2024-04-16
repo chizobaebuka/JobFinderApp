@@ -2,8 +2,9 @@ import { Footer, Navbar } from "./components"
 import { Outlet, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import FindJobs from "./pages/FindJobs";
 import Companies from "./pages/Companies";
-import { About, AuthPage, CompanyProfile, JobDetails, UploadJob, UserProfile } from "./pages";
+import { About, AuthPage, CompanyProfile, UploadJob, UserProfile } from "./pages";
 import { useSelector } from "react-redux";
+import JobDetail from "./pages/JobDetail";
 
 
 function Layout() {
@@ -24,7 +25,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={ <Navigate to="find-jobs" replace/> } />
+          <Route 
+            path="/" 
+            element={ <Navigate to="find-jobs" replace={true} /> } 
+          />
           <Route path="/find-jobs" element={<FindJobs />} />
           <Route path="/companies" element={<Companies />} />
           <Route 
@@ -37,7 +41,7 @@ function App() {
           <Route path={"/company-profile"} element={<CompanyProfile />} />
           <Route path={"/company-profile/:id"} element={<CompanyProfile />} />
           <Route path={"/upload-job"} element={<UploadJob />} />
-          <Route path={"/job-detail/:id"} element={<JobDetails />} />
+          <Route path={"/job-details/:id"} element={<JobDetail />} />
         </Route>
 
         <Route path="/about-us" element={<About />} />

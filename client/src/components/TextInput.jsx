@@ -25,7 +25,7 @@ TextInput.displayName = 'TextInput';
 TextInput.propTypes = {
     type: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
-    styles: PropTypes.string.isRequired,
+    styles: PropTypes.string,
     label: PropTypes.string,
     register: PropTypes.object,
     name: PropTypes.string,

@@ -105,10 +105,10 @@ const Navbar = () => {
             <Link to="/">Companies</Link>
           </li>
           <li>
-            <Link to="/">Upload Job</Link>
+            <Link to="/upload-job">Upload Job</Link>
           </li>
           <li>
-            <Link to="/">About Us</Link>
+            <Link to="/about-us">About Us</Link>
           </li>
         </ul>
 
@@ -116,7 +116,10 @@ const Navbar = () => {
           { 
             !user?.token ? (
               <Link to="/user-auth">
-                <CustomButton title='Sign In' containerStyles='text-blue-600 py-5 px-5 focus:outline-none hover:bg-green-700 hover:text-white rounded-full border border-blue-600'/>
+                <CustomButton 
+                  title='Sign In' 
+                  containerStyles='text-blue-600 py-5 px-5 focus:outline-none hover:bg-green-700 hover:text-white rounded-full border border-blue-600'
+                />
               </Link>
             ) : (
               <div>

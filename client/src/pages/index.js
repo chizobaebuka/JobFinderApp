@@ -3,7 +3,7 @@ import AuthPage from "./Auth";
 import Company from "./Companies";
 import CompanyProfile from "./CompanyProfile";
 import FindJob from "./FindJobs";
-import JobDetails from "./JobDetails";
+import JobDetail from "./JobDetail";
 import UploadJob from "./UploadJob";
 import UserProfile from "./UserProfile";
 
@@ -14,7 +14,7 @@ export {
     Company,
     CompanyProfile,
     FindJob,
-    JobDetails,
+    JobDetail,
     UploadJob,
     UserProfile
 }
